@@ -22,11 +22,7 @@ export function ProductCard({children, product, className, style, onChange, valu
     const { counter, increaseBy, isMaxCountReached, reset } = useProduct({onChange, product, value, initialValues})
     
   return (
-    <Provider value={{
-        product,
-        counter,
-        increaseBy,
-        maxCount: initialValues?.maxCount
+    <Provider value={{ product, counter, increaseBy, maxCount: initialValues?.maxCount
 
     }}>
       <div className={`${styles.productCard} ${className}`}
